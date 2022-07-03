@@ -1,7 +1,17 @@
 let container = document.getElementById("div")
 let externalHTML = `
     <div class="father">
-        <div class="child front">Front</div>
+        <div class="child front"> front
+            <div class="rectangle red"></div>
+            <div class="rectangle blue"></div>
+            <div class="rectangle green"></div>
+            <div class="rectangle yellow"></div>
+            <div class="rectangle red"></div>
+            <div class="rectangle yellow"></div>
+            <div class="rectangle green"></div>
+            <div class="rectangle green"></div>
+            <div class="rectangle blue"></div>
+        </div>
         <div class="child back">Back</div>
         <div class="child right">Right</div>
         <div class="child left">Left</div>
@@ -88,7 +98,6 @@ style.innerHTML = `
     
     .front {
         transform: translateZ(100px);
-        background: var(--purple);
     }
     
     .back {
@@ -118,6 +127,20 @@ style.innerHTML = `
         top: 100px;
         transform: rotateX(-90deg);
         background: var(--blue);
+    }
+
+    .rectangle {
+        width: 30px;
+        height: 30px;
+        bacground: var(--green);
+        display: inline-block;
+        position: relative;
+        border-radius: 8px;
+        margin: 2px;
+    }
+
+    .rectangle .red {
+        background: var(--red)
     }
 `;
 
